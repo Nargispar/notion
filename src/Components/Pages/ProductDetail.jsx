@@ -54,18 +54,56 @@ console.log(currentProducts)
 		width:"100vw",
 		display:"flex",
 		justifyContent:"center",
-		alignItems:"center"
+		alignItems:"center",
+		backgroundColor:"#E5E4E2"
 	}}>
-		<Product product={currentProducts}/>
 		<Box>
-			<Typography>Availablity : {currentProducts?.availabilityStatus}</Typography>
-			<Typography>Warranty: {currentProducts?.warrantyInformation}</Typography>
+			<Box component="img" src={currentProducts?.thumbnail} sx={{backgroundColor:"#E5E4E2",mx:5, border:"1px solid #000"}}/>
+		</Box>
+		{/* <Product product={currentProducts}/> */}
+		<Box>
+		<Typography sx={{
+				color:"#000",
+				fontSize:"20px",
+				fontWeight:600,
+			
+			}} >
+				Title : {currentProducts?.title}
+				</Typography>
+				<Typography sx={{
+				color:"#000",
+				fontSize:"18px", 
+				fontWeight:600,
+				mt:2
+			}} >
+				Price : $ {currentProducts?.price} </Typography>
+				<Typography  sx={{
+				color:"#000",
+				fontSize:"18px", 
+				fontWeight:600,
+				mt:2}}
+				> Rating : {currentProducts?.rating}</Typography>
+
+			<Typography sx={{
+				color:"#000",
+				fontSize:"20px",
+				mt:2
+			}} >
+				Availablity : {currentProducts?.availabilityStatus}</Typography>
+			<Typography sx={{
+				color:"#000",
+				fontSize:"20px",
+				mt:2
+			}}
+				 >Warranty: {currentProducts?.warrantyInformation}</Typography>
 			{/* <Typography>Weight : {currentProducts.weight}</Typography> */}
 			
 			<Button sx={{
 				color:"#000",
 				border:"1px solid #000",
 				px:3,
+				mt:3,
+				backgroundColor:"#E5E4E2"
 				
 			}}onClick={handleCart}> ADD TO CART</Button>  
 		</Box>

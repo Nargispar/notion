@@ -45,7 +45,7 @@ import {AppBar,Toolbar,Box,Link,List,ListItem,ListItemButton,ListItemText,Typogr
 		return result
 
 	}
-	let total_original_price = 0
+	
 	let total_final_price = 0
 
 	cart.forEach((prod)=>{
@@ -177,7 +177,7 @@ import {AppBar,Toolbar,Box,Link,List,ListItem,ListItemButton,ListItemText,Typogr
 					})
 				}
 			</Box>
-			<Box sx={{width:"400px" ,display:"flex", justifyContent:"space-between"}}>
+			<Box sx={{width:"400px" ,display:"flex", justifyContent:"space-between",px:3}}>
 						<Typography sx={{fontSize:"18px", fontWeight:"600"}}>SUBTOTAL</Typography>
 						<Box sx={{display:"flex"}}>
 						{/* <Typography sx={{px:2}} >Rs. {total_original_price}</Typography> */}

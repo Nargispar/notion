@@ -26,11 +26,11 @@ const Shop = () => {
   };
 
   return (
-    <Box component="div" width="100%">
+    <Box component="div" width="100vw">
       <Box sx={{width:"100vw", display: "flex", justifyContent: "space-between" }}>
-        <Typography sx={{width:"80vw", mt: 5,backgroundColor:"yellow" ,pl:5}}>Shop All</Typography>
-       <Box width="20vw" sx={{backgroundColor:"red",pr:5,mt:5}}>
-		<FormControl  sx={{width:"300px", color:"black"}}>
+        <Typography sx={{width:"100%", mt: 5,pl:5}}>Shop All</Typography>
+       <Box width="20vw" sx={{pr:5,mt:5}}>
+		<FormControl>
         <InputLabel id="demo-simple-select-label">FILTER PRICE</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -38,6 +38,7 @@ const Shop = () => {
           value={priceFilter}
           label="FILTER PRICE"
           onChange={handlePriceChange}
+		  sx={{width:"15vw", color:"black", border:"1px solid #000"}}
         >
           <MenuItem value="">All</MenuItem>
 		  <MenuItem value={1}>1 Rs</MenuItem>
