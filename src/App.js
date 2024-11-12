@@ -9,6 +9,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { Routes, Route  } from 'react-router-dom';
 import Shop from './Components/Pages/Shop';
 import NewArrivals from './Components/Pages/NewArrivals';
+import ProductDetail from './Components/Pages/ProductDetail';
 
 const theme = createTheme({
   palette: {
@@ -28,6 +29,8 @@ function App() {
       
       <Routes>
         <Route path='/' element={<HomePage/>}/>
+        <Route path='/shop' element={<Shop/>}/>
+        <Route path='/shop/card/:id' element={<ProductDetail/>}/>
         <Route path='/men' element={<Men/>}/>
         <Route path='/Women' element={<Women/>}/>
         <Route path='/newarrivals' element={<NewArrivals/>}/>

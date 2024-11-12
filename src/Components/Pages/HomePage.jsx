@@ -1,8 +1,14 @@
 import React from 'react'
 import { Grid, Typography, Button, Box } from '@mui/material'
+import { useSelector } from 'react-redux'
 
 
 const HomePage = () => {
+
+const data = useSelector((state)=> state.products)
+
+
+
   return (
     <Grid container
       sx={{ backgroundColor: '#a09484', height: '90vh', width: '100vw' }}
