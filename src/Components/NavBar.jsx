@@ -200,13 +200,18 @@ import {AppBar,Toolbar,Box,Link,List,ListItem,ListItemButton,ListItemText,Typogr
 			>
 			  <List>
 				<ListItem disablePadding>
-				  <ListItemButton onClick={toggleNavDrawer}>
-					<ListItemText primary="Shop" />
+				<ListItemButton onClick={toggleNavDrawer} component={Link} to="/shop">
+				<ListItemText primary="Shop" />
 				  </ListItemButton>
 				</ListItem>
 				<ListItem disablePadding>
-				  <ListItemButton onClick={toggleNavDrawer}>
-					<ListItemText primary="Women" />
+				<ListItemButton onClick={toggleNavDrawer} component={Link} to="/women">
+				<ListItemText primary="women" />
+				  </ListItemButton>
+				</ListItem>
+				<ListItem disablePadding>
+				<ListItemButton onClick={toggleNavDrawer} component={Link} to="/shop/card/:id">
+				<ListItemText primary="productdetail" />
 				  </ListItemButton>
 				</ListItem>
 				<ListItem disablePadding>
